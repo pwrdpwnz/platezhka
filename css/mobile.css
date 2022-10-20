@@ -1,0 +1,487 @@
+@media (max-width: 1400px) {
+    :root {
+        --container-width: 100%;
+    }
+}
+@media (max-width: 1260px) {
+    :root {
+
+    }
+    body {
+        font-size: 14px;
+    }
+    .button,
+    .btn button,
+    .cf_submit,
+    .block_submitbutton input {
+        padding: 10px 20px;
+        min-width: 80px;
+        font-size: 13px;
+    }
+    #header .logo img {
+        width: 120px;
+    }
+    #header .menu {
+        margin-left: 30px;
+    }
+    #header .menu > ul > li + li {
+        margin-left: 10px;
+    }
+
+    #header .menu > ul > li > a {
+        font-size: 14px;
+    }
+    #header #accounting {
+        margin-left: 20px;
+    }
+    #exchanger .step#result .step-cash {
+        background-position: left 12px;
+    }
+    #exchanger .step#result .step-cash .item .icon img {
+        max-width: 24px;
+        max-height: 24px;
+    }
+    #exchanger .step#result .step-cash .item .course {
+        font-size: 16px;
+    }
+    #exchanger .step#result .step-cash .item .reserve {
+        font-size: 12px;
+    }
+    #exchanger .currencies .types span + span {
+        margin-left: 3px;
+    }
+    #exchanger .currencies .types span {
+        padding: 5px 5px;
+        border: 1px solid var(--exchanger-types-border);
+    }
+}
+@media (max-width: 1200px) {
+    :root {
+        --container-thin-width: 100%;
+    }
+}
+@media (max-width: 1024px) {
+
+}
+@media (max-width: 990px) {
+    :root {
+        --container-narrow-width: 100%;
+    }
+	h1 {
+	    font-size: 36px;
+	    margin-bottom: 50px;
+	}
+    #topbar .container {
+        justify-content: center;
+    }
+    #header {
+        padding: 20px 0;
+    }
+    #header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #header .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #header .logo img {
+        width: 240px;
+    }
+    #header .menu {
+        margin: 30px 0 10px;
+        width: 100%;
+    }
+    #header .menu > ul {
+        margin-top: 0;
+        justify-content: center;
+    }
+    #header .menu > ul > li + li {
+        margin-left: 30px;
+    }
+    #header #languages,
+    #header #accounting {
+        margin-left: 50px;
+    }
+    #exchanger .container {
+        flex-direction: column;
+    }
+    #exchanger .container > .step {
+        width: 100%;
+        border-width: 2px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+    #exchanger .container > .step + .step {
+        margin-top: 30px;
+    }
+    #exchanger .step#from .form, #exchanger .step#to .form {
+        border-bottom-width: 0px;
+        padding-bottom: 0;
+    }
+    #exchanger .container > .step#result {
+        border-radius: 10px 10px 15px 15px;
+    }
+    #exchanger .step .form {
+        padding: 0 20px 30px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    #exchanger .step .form .icon {
+        display: none;
+    }
+    #exchanger .currencies {
+        padding-top: 0px;
+    }
+    #exchanger .currencies .title {
+        display: none;
+    }
+    #exchanger .currencies .types span {
+        padding: 5px 15px;
+        font-weight: 400;
+    }
+    #exchanger .currencies .types span + span {
+        margin-left: 7px;
+    }
+    #exchanger .currencies-list .items-list .item {
+        border-bottom-width: 1px;
+    }
+    #exchanger .currencies-list .items-list .item.active {
+        border-bottom-width: 1px;
+    }
+    #exchanger .currencies-list .items-list .item + .item {
+        margin-top: 10px;
+    }
+    #exchanger .currencies-list .items-list .item .icon img {
+        width: 24px;
+    }
+    #exchanger .currencies-list .items-list .item .name {
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    #advantages {
+        margin-top: 40px;
+    }
+    #advantages .points {
+        flex-wrap: wrap;
+        margin: 0 -20px
+    }
+
+    #advantages .points .item {
+        max-width: initial;
+        margin: 20px;
+        width: calc(50% - 40px);
+        border-radius: 5px;
+    }
+
+    #advantages .points .item .icon img {
+        max-height: 80px;
+    }
+
+    #advantages .points .item .label {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    #about {
+        margin-top: 40px;
+    }
+    #about .block {
+        display: block;
+        position: relative;
+    }
+    #about .block + .block {
+        margin-top: 60px;
+    }
+    #about .block > .image {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 150px;
+        z-index: 3;
+        opacity: 0.3;
+    }
+    #about .block .content {
+        width: 100%;
+        position: relative;
+        z-index: 5;
+    }
+    #about .block .content > .image {
+        display: block;
+        margin-top: 30px;
+        text-align: center;
+    }
+    #about .block .content > .image img {
+        max-height: 300px;
+        max-width: 300px;
+    }
+    #about .common-heading {
+        font-size: 28px;
+        line-height: 36px;
+        text-align: center;
+    }
+    #about .common-heading br {
+        display: none;
+    }
+    #about .cta {
+        text-align: center;
+    }
+    .text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+	table th {
+	    font-size: 16px;
+	}
+	table td {
+	    font-size: 13px;
+	}
+    .button.big {
+        min-width: 220px;
+        line-height: 24px;
+        font-size: 16px;
+    }
+    .button.large {
+        font-size: 18px !important;
+        padding: 20px;
+    }
+    #footer {
+        margin-top: 40px;
+        padding: 30px 0;
+    }
+
+    #footer .footer-wrap {
+        flex-wrap: wrap;
+        margin: 0 -20px;
+        justify-content: center;
+    }
+
+    #footer .column {
+        margin: 20px;
+        width: calc(50% - 40px);
+        max-width: 300px;
+        flex-basis: initial;
+        flex-grow: initial;
+    }
+
+    #footer .column + .column {
+
+    }
+
+    #footer .column:first-child {
+        margin-right: 20px;
+    }
+
+    #footer .column:nth-child(even) {
+        text-align: right;
+    }
+
+    #footer .logo {
+
+    }
+
+    #footer .logo img {
+        max-width: 150px;
+    }
+
+    #footer .description {
+        margin-top: 10px;
+        line-height: 18px;
+    }
+
+    #footer .title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    #footer .column > ul {
+        margin-top: 10px;
+    }
+
+    #footer .column > ul li + li {
+        margin-top: 10px;
+    }
+    #faq {
+
+    }
+    #faq .questions {
+        width: 250px;
+    }
+    #faq .questions .question {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    #faq .questions .question + .question {
+        margin-top: 15px;
+    }
+    #faq .answers {
+        width: calc(100% - 250px - 40px);
+    }
+    #contacts .methods {
+        width: calc(100% - 40% - 50px);
+    }
+}
+
+@media (max-width: 768px) {
+
+    #main .container {
+        flex-direction: column;
+    }
+
+    #main .sidebar,
+    #main .content {
+        width: 100%;
+    }
+    #topbar {
+        display: none;
+    }
+    #topbar .container {
+        flex-wrap: wrap;
+    }
+    #topbar .container > div {
+        width: calc(50% - 20px);
+        margin: 10px;
+        text-align: center;
+    }
+    #topbar .value {
+        white-space: nowrap;
+    }
+    #header .container {
+
+    }
+    #header .logo img {
+        width: 160px;
+    }
+    #menu-opener {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: var(--container-padding);
+        font-size: 18px;
+    }
+    #header .menu {
+        display: none;
+    }
+    #header #theme-switch,
+    #header #languages,
+    #header #accounting {
+        display: none;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    #header #accounting,
+    #header #languages {
+        margin-left: 20px;
+    }
+    #header #accounting {
+        margin-right: 20px;
+    }
+    #header .menu > ul {
+        flex-direction: column;
+    }
+    #header .menu > ul li {
+
+    }
+    #header .menu > ul li + li {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    #header .menu > ul li:after {
+        display: none;
+    }
+    #header .menu > ul li.current-menu-item a {
+        color: var(--light-blue);
+    }
+    #faq {
+        display: block;
+    }
+    #faq .questions {
+        width: auto;
+    }
+    #faq .questions .question {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    #faq .answers {
+        margin-top: 30px;
+        width: auto;
+    }
+    #contacts {
+        flex-direction: column;
+    }
+    #contacts .form-wrapper {
+       width: auto;
+       order: 2;
+        margin-top: 30px;
+    }
+    #contacts .form-wrapper h2 {
+        display: block;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    #contacts .methods {
+        order: 1;
+        width: auto;
+    }
+
+    .warp_pages_change > div {
+        flex-direction: column;
+    }
+
+    .warp_pages_change > div > .col-md-4 {
+        width: auto;
+    }
+
+    .warp_pages_change > div > .col-md-4 + .col-md-4 {
+        margin-top: 50px;
+    }
+
+    .warp_pages_change .block-title {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    .warp_pages_change .selectet-cur {
+        margin-bottom: 20px;
+    }
+
+    .warp_pages_change .step-info .title {
+        font-size: 16px;
+        margin: 15px 0;
+    }
+
+    .redz_seo h2 {
+        margin: 20px 0;
+    }
+
+    .page-template-pn-seopage h1 {
+        font-size: 24px;
+        line-height: 32px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 550px) {
+    #exchanger .currencies .types {
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    #exchanger .currencies .types span {
+        margin: 5px 5px;
+    }
+    #exchanger .currencies .types span + span {
+        margin-left: 5px;
+    }
+    #header #accounting {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    #advantages .points .item {
+        margin: 0 20px;
+        width: 100%;
+    }
+    #advantages .points .item + .item {
+        margin-top: 20px;
+    }
+}
