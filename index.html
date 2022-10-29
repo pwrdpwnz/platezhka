@@ -292,8 +292,105 @@
                         <span class="icon"><i class="fas fa-envelope"></i></span>
                         <span class="value"><a href="mailto:info@unicash.pro">info@unicash.pro</a></span>
                     </div>
+
                 </div>
             </section>
+
+            <div class="marquee-wrapper">
+                <ul class="marquee-content">
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">ETC</div>
+                            <div class="marquee-course">$22.59</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">DOGE</div>
+                            <div class="marquee-course">$0.05904</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">BTC</div>
+                            <div class="marquee-course">$19299.96</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">XRP</div>
+                            <div class="marquee-course">$0.4567</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">ETC</div>
+                            <div class="marquee-course">1000$</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">ETC</div>
+                            <div class="marquee-course">1000$</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">ETC</div>
+                            <div class="marquee-course">1000$</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">ETC</div>
+                            <div class="marquee-course">1000$</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">ETC</div>
+                            <div class="marquee-course">1000$</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">ETC</div>
+                            <div class="marquee-course">1000$</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">ETC</div>
+                            <div class="marquee-course">1000$</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">ETC</div>
+                            <div class="marquee-course">1000$</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">ETC</div>
+                            <div class="marquee-course">1000$</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">ETC</div>
+                            <div class="marquee-course">1000$</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="marquee-item">
+                            <div class="current">ETC</div>
+                            <div class="marquee-course">1000$</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
             <header id="header">
                 <div class="container">
                     <div id="menu-opener" class="closed"><i class="far fa-bars"></i></div>
@@ -313,7 +410,6 @@
                 <div class="container">
                     <script>
                         jQuery(function ($) {
-
                             function numberFixed(number, fixed) {
                                 if ((typeof number === 'number' || typeof number === 'string') && !isNaN(number - parseFloat(number))) {
                                     number = String(number);
@@ -399,7 +495,43 @@
                                 });
                             }
 
+                            var currencyInfo = {
+                                'RUB': {sell: 0.99, buy: 1.01},
+                                'BTC': {sell: 0.99, buy: 1.01},
+                                'ETH': {sell: 0.99, buy: 1.01},
+                                'USDT': {sell: 0.99, buy: 1.01},
+                                'BNBBEP2': {sell: 0.01, buy: 3.01},
+                                'LTC': {sell: 0.99, buy: 1.01},
+                                'USD': {sell: 0.99, buy: 1.01},
+                                'XMR': {sell: 0.99, buy: 1.01},
+                                'DSH': {sell: 10.01, buy: 20.01},
+                            }
+
+                            /**
+                             * @param dej - if 1 - left, if 2 - right
+                             */
                             function show_calc(summ = 0, dej = 1, change) {
+                                summ = typeof summ == 'number' ? summ : parseFloat(summ);
+
+
+                                var currencyLeft = currencyInfo[$('.js_item_right_redz.active').data('real-type')];
+                                var currencyRight = currencyInfo[$('.js_item_left_redz.active').data('real-type')];
+
+                                if (dej == 1) {
+                                    var sellSum = currencyLeft.sell * summ;
+                                    var buySum = sellSum / currencyRight.buy;
+                                    $("#in-price").val(buySum.toFixed(2));
+                                    $("#step-chage-inde1 .price").text(summ.toFixed(2));
+                                    $("#step-chage-inde2 .price").text(buySum.toFixed(2));
+                                } else {
+                                    var buySum = summ * currencyLeft.buy;
+                                    var sellSum = buySum / currencyRight.sell;
+                                    $("#out-price").val(sellSum.toFixed(2));
+                                    $("#step-chage-inde1 .price").text(sellSum.toFixed(2));
+                                    $("#step-chage-inde2 .price").text(summ.toFixed(2));
+                                }
+
+                                /*
                                 var id = $('#redz_right_col_html .item.active').data('id');
                                 if (summ == 0) {
 
@@ -415,6 +547,7 @@
 
 
                                 exchange_calc2(id, summ, dej, change);
+                                */
                             }
 
                             function create_icons_redz() {
@@ -520,7 +653,9 @@
                                 $("#step-chage-val-inde2 .label").text(name2);
                                 $("#to-code.code").text(type2);
 
-                                show_calc();
+                                show_calc($('#in-price').val(), 2);
+
+                                // show_calc();
                             });
 
                             go_active_left_col_redz();
@@ -549,8 +684,7 @@
                                 $("#step-chage-val-inde1 .label").text(name1);
                                 $("#from-code.code").text(type1);
 
-
-                                show_calc();
+                                show_calc($('#in-price').val(), 2);
 
                                 return false;
                             });
@@ -588,6 +722,8 @@
                                         $('.js_item_right_redz_' + vtype).show();
                                     }
                                 }
+
+                                show_calc($('#in-price').val(), 2);
                                 return false;
                             });
 
@@ -595,17 +731,13 @@
                                 var price = $(this).val();
                                 var change = true;
                                 show_calc(price, 1, change);
-
                             });
 
                             $('#in-price').on('input', function (e) {
                                 var price = $(this).val();
                                 var change = true;
                                 show_calc(price, 2, change);
-
                             });
-
-
                         });
                     </script>
                     <div class="step" id="from">
@@ -628,7 +760,7 @@
                             <div class="types">
                                 <span class="tbl_icon xtt4_icon js_icon_left_redz js_icon_left_redz_0" data-type="0"
                                       style="">Все</span>
-                                <span class="tbl_icon xtt4_icon js_icon_left_redz js_icon_left_redz_RUB" data-type="RUB"
+                                <span class="tbl_icon xtt4_icon js_icon_left_redz js_icon_left_redz_RUB" data-type="RUB" onclick="summ()"
                                       style="">RUB</span>
                                 <span class="tbl_icon xtt4_icon js_icon_left_redz js_icon_left_redz_USD" data-type="USD"
                                       style="">USD</span>
@@ -926,8 +1058,7 @@
                                          data-valsid2="18" data-name="Сбербанк RUB"
                                          data-img="https://unicash.pro/wp-content/uploads/sberrub.png" data-id="855"
                                          data-min-price="5000"
-                                         data-next-step-link="https://unicash.pro/exchange-SBPRUB-to-XMR/"
-                                         data-type="RUB" data-real-type="XMR" data-direction-id="855"
+                                         data-type="RUB" data-real-type="RUB" data-direction-id="855"
                                          data-course_give=""
                                          data-course_get="" data-reserv="12298.686">
                                         <div class="icon"><img src="https://unicash.pro/wp-content/uploads/sberrub.png">
@@ -1154,7 +1285,6 @@
                                             src="https://unicash.pro/wp-content/uploads/Bez-nazvaniya-2.jpg" alt="">
                                     </a>
                                 </li>
-
                             </ul>
                         </div>
                     </div>
@@ -1165,5 +1295,7 @@
     </div>
 </div>
 
+<script src="js/index.js"></script>
+<script src="js/converter.js"></script>
 </body>
 </html>
